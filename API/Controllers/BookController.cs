@@ -36,7 +36,7 @@ public class BookController : ControllerBase
     }
 
     // POST: api/Book
-    [HttpPost]
+    [HttpPost("Add")]
     public async Task<IActionResult> AddBook([FromBody] Book newBook)
     {
         try
@@ -63,7 +63,7 @@ public class BookController : ControllerBase
     }
 
     // PUT: api/Book/5
-    [HttpPut("{id}")]
+    [HttpPut("new")]
     public async Task<IActionResult> UpdateBook(int id, [FromBody] Book book)
     {
         if (!ModelState.IsValid)
